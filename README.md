@@ -1,4 +1,4 @@
-##JS Practice
+## JS Practice
 
 I'm mostly taking insporation from and working through the exercises here: https://www.w3resource.com/javascript-exercises/
 
