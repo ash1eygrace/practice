@@ -1,0 +1,11 @@
+.user{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 20% 0% 15% 0%;
+}
+.user img{
+    max-width: 100px;
+    margin-bottom: 5%;
+}
