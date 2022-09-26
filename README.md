@@ -1,6 +1,6 @@
 ## JS Practice
 
-**Live site:** https://ash1eygrace.github.io/practice/ 
+<!-- Live site:** https://ash1eygrace.github.io/practice/ -->
 
 ### About this Repo
 
