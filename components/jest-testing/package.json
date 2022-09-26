@@ -1,7 +1,7 @@
 {
   "name": "jest-testing",
   "version": "1.0.0",
-  "description": "",
+  "description": "this is a companion for https://ash1eygrace.com/javascript-unit-testing-with-jest/",
   "main": "exampe.test.js",
   "scripts": {
     "test": "jest",

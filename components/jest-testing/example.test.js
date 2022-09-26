@@ -1,3 +1,6 @@
+// this is a companion for https://ash1eygrace.com/javascript-unit-testing-with-jest/
+
+
 const remainder = require('./example.js');
 
 test('Test 1: remainder of 3 / 2 equals 1', () => {
