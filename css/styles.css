@@ -1,3 +1,6 @@
+#main{
+    padding-left: 300px;
+}
 .user{
     display: flex;
     flex-direction: column;
@@ -8,4 +11,18 @@
 .user img{
     max-width: 100px;
     margin-bottom: 5%;
+}
+
+@media screen and (max-width: 1200px) {
+    #sidebar{
+        display: none;
+    }
+    #main{
+        padding-left: 0px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    #mobile-nav{
+        display: none;
+    }
 }
