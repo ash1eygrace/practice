@@ -32,8 +32,9 @@ const title = React.createElement(
 console.log(title);
 ```
 Example of above element via console:
+<img width="602" alt="Pasted image 20230122100140" src="https://user-images.githubusercontent.com/29527450/214083812-df3d9eff-cd20-4197-abac-eee6b287fab6.png">
 
-![[../../../z files/Pasted image 20230122100140.png]]
+
 Example of how the above React node will be rendered in the DOM:
 ```html
 <h1 id="main-title" title="This is a title.">My First React Element!</h1>
@@ -112,7 +113,8 @@ ReactDOM.render(
 
 Displays on page and in DOM as: 
 
-![[../../../z files/Pasted image 20230122114953.png]]
+<img width="671" alt="Pasted image 20230122114953" src="https://user-images.githubusercontent.com/29527450/214083872-625e2cad-07f1-4190-b28f-683406091dbe.png">
+
 
 ## JSX
 
