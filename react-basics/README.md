@@ -32,6 +32,7 @@ const title = React.createElement(
 console.log(title);
 ```
 Example of above element via console:
+
 <img width="602" alt="Pasted image 20230122100140" src="https://user-images.githubusercontent.com/29527450/214083812-df3d9eff-cd20-4197-abac-eee6b287fab6.png">
 
 
