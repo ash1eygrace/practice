@@ -147,19 +147,40 @@ ReactDOM.render(
 	document.getElementById('root')
 );
 ```
-
-Converts to
+Converts to: 
 
 ```jsx
+
 const title = <h1>My First React Element!</h1> ;
 const desc = <P>I just learned to create a React node and render it into the DOM.</p>
-	  
+
+const header = React.createElement(
+	'header',
+	null,
+	title,
+	desc
+);
+  
+ReactDOM.render(
+	header,
+	document.getElementById('root')
+);
 ```
 
+Since JSX isn't valid JS and the browser cannot interpret it. You'll need to use the Babel compiler to transpile it into react.createElement calls, since we're not using a build system like create-react-app, we can add this to the HTML file scripts: 
+
+```
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script type="text/babel" src="./app.js"></script>
+```
+
+Notice in the above we've added `type="text/babel"` to the `app.js`. This signals that the JavaScript in `app.js` should be compiled before it's executed. 
+
+**Note: you will get a blocked by CORS policy console error if you try to open your files directly with file:// to bypass this make sure you open it in a live server like VSC's [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension. 
 
 
-
-Current position in course: https://teamtreehouse.com/library/react-basics-2/understanding-jsx 
 
 
 ## Resources
