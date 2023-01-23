@@ -178,9 +178,30 @@ Since JSX isn't valid JS and the browser cannot interpret it. You'll need to use
 
 Notice in the above we've added `type="text/babel"` to the `app.js`. This signals that the JavaScript in `app.js` should be compiled before it's executed. 
 
-**Note: you will get a blocked by CORS policy console error if you try to open your files directly with file:// to bypass this make sure you open it in a live server like VSC's [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension. 
+**Note: you will get a blocked by CORS policy console error if you try to open your files directly with file:// to bypass this make sure you open it in a live server like VSC's [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension.** 
+
+### JavaScript Expressions in JSX
+
+Finally you can embed JS Expressions in JSX like so:
+
+```js
+// Embed JavaScript Expressions in JSX
 
 
+const title = 'My First React Element!';
+const desc = 'I just learned to create a React node and render it into the DOM.';
+const myTitleID = 'main-title';
+const myName = 'Ashley';
+
+const header = (
+	<header>
+		<h1 id={myTitleID}>{ title }</h1>
+		<h2> { myName }'s learning stuff. </h2>
+		<p>{ desc }</p>
+	</header>
+
+);
+```
 
 
 ## Resources
