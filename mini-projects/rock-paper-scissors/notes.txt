@@ -1,0 +1,95 @@
+## scorekeeper thought process Jan 22
+
+- 5 rounds 
+- count score of each round
+- display score on-screen each round? * e.g., 1:4 
+- best out of 5 (play vs. computer)
+- computer score
+- player score
+- if player > computer 
+    - you won
+- if player  < computer 
+    - the computer won
+
+### variables: 
+
+- playerScore
+- computerScore
+    - if I don't display the computer score, I don't need this.
+    - as long as playScore equals or is greater than 3 they won.
+    - if i use only playerScore i could just print "the computer got {5 - playerScore} which would be the compter's result
+    this way I won't have to count two scores and only one. 
+        - also I could change computer to player2, that way when it's multiplayer player2 can be calculated the same way
+            - the assignment of the computer to player2 or an actual person to player2 would take place outside the game loop. 
+            - this seems like the most scalabel option.
+
+
+### What needs to be done 
+
+Goal is to keep score on screen. 
+e.g. computerScore(player2) 0 playerScrore 1 
+
+- declare the score variables outside of the round function so it's in scope (i think - need to test)
+- play each round (5 total) if the user wins we increment playerScore ++ 
+- we display the new score on screen each time. (your score is 2 | computer score is 1)
+- at the end of the 5 rounds we have a total of x points in score
+- we compare total score x points and if they're greater than 3 the player won. 
+- we computer the computer's score by taking total round which is 5 and subtracting playerScore
+- we display both player and computer score and say you won. 
+
+
+## to do now:  
+
+Read over and understand the functions of: https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win 
+
+
+### update Jan 23
+
+- keep in mind that the rounds could change. 
+- ensure that the calculation of the player score uses the variable of rounds vs a static number
+
+## features to not forget
+
+- add check if user refreshes page during game to confirm that they want to exit. 
+- turn new game fuction into reusable functoin?:
+
+/* New Game button switched from start page to game page */
+document.getElementById("new-game").addEventListener("click", newGame);
+
+function newGame() {
+  document.getElementById("landing-page").className += " hide";
+  document.getElementById("game-page").className -= "hide";
+}
+
+# Choice page brainstorming: 
+
+Player’s choice which the event listener lives on lines 29-33 + a question mark waiting on the computers choice. 
+
+## We need to:
+- pass the ID of the players choice through a function to show that choice
+- Hide the other choices (e.g. player chooses rock hide scissors and paper)
+- Display a question mark in place of the computer’s choice
+- Do this for a few seconds (test for UX) 
+
+## What I need to:
+
+1. define the variables Rock Paper Scissors which are associate with the IDs of the elements.
+2. Pass through the playerChoice variable 
+    * hide all choices except the playerChoice 
+    * Show the player choice
+    * Show the question mark for comp-choice
+3. Show this screen for x seconds to build anticipation.
+
+### Function could maybe look like: 
+
+waitCompChoice { 
+If playerChoice is not ‘Rock’{	  
+    document.getElementById("Rock").className += " hide";
+} else is not Paper { 
+    document.getElementById(“Paper”).className += " hide";
+} else {
+  document.getElementById(“Scissors”).className += " hide”;
+}
+//show compChoice question mark
+document.getElementById("comp-choice").classList.remove("hide");
+}

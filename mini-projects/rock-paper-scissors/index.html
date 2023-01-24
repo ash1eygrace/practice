@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>rps-ui</title>
+</head>
+<body>
+
+<nav id="top-nav" class="hide">
+    <button id="exit" class="btn">Exit</button>
+    <p></p> <!╌ Player score ╌> 
+    <button id="restart" class="btn">Restart</button>
+</nav>
+
+<div id="content">
+    <div id="landing-page" class="active" >
+        <h1>Get Ready!</h1>
+        <p>Let's play Rock, Paper, Scissors!</p>
+        <button id="new-game" class="btn">New Game</button>
+    </div>
+    
+    <div id="game-page" class="hide">
+        <h1 id="page-title" class="hide">Player Choice</h1>
+        <img id="Rock" src="images/rock.png" alt="Rock" class="shadow">
+        <img id="Paper" src="images/paper.png" alt="Paper" class="shadow">
+        <img id="Scissors" src="images/scissors.png" alt="Scissors" class="shadow">
+        <img id="comp-choice" src="images/wait-comp-choice.png" alt="Scissors" class="shadow hide">
+        <p>Choose a weapon!</p>
+    </div>
+
+    <div id="winner-page" class="hide" >
+        <h1>You won 👍 </h1>
+        <p>You won! Rocks beats scissors!</p>
+    </div>
+ </div>
+
+<div id="score-panel" class="hide">
+    <div id="scores">
+        <p>Player: 1</p>
+        <p>Computer: 4</p>
+    </div>
+</div>
+
+</body>
+<script src="main.js"></script>
+</html>
