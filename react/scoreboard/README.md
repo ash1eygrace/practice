@@ -97,3 +97,63 @@ ReactDOM.render(
 );
 ```
 
+## Props
+
+Props (properties) are used to customize Components and pass dynamic information into them. To use props you need to: 
+
+1. Define the props in a components JSX tag using attribute syntax
+2. Enable the use of props in a component  
+
+Every React Component has a props object, if no props are passed when inspected using React Dev Tools the props object will be empty. Example: 
+
+```
+props
+	new entry: ""
+```
+
+We can pass props to the Header through the JSX tax like so, and give by giving our function a parameter 
+
+```js
+
+const Header = (props) => { //give function props parameter
+	return (
+		<header>
+			<h1>{ props.title }</h1>
+			<span className="stats">{Players: props.totalPlayers }</span>
+		</header>
+	);
+}
+
+const App = () => {
+	return (
+		<div className="scoreboard">
+			<Header 
+			title="Scoreboard" 
+			totalPlayers={1}/>  //passing props
+			/>
+		</div>
+	);
+}
+
+  
+
+ReactDOM.render(
+	<App />,
+	document.getElementById('root')
+);
+
+```
+
+Now when we check Chrome React Dev Tools we see props like so: 
+
+```
+props
+	title: "Scoreboard"
+	totalPlayers: 1
+	newentry: ""
+```
+
+- props pass data from a parent component down to a child component
+- parent component higher in the tree owns and controls the prop values
+- props are immutable e.g. components can only read props never change them 
+- if there is more than one prop add to separate lines for better readability
