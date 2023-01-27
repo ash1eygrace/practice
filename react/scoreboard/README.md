@@ -157,3 +157,53 @@ props
 - parent component higher in the tree owns and controls the prop values
 - props are immutable e.g. components can only read props never change them 
 - if there is more than one prop add to separate lines for better readability
+
+## State
+
+State is the data you want to track in your app. State is what allows you to create components that are dynamic and interactive, and it's the only data that changes over time.
+
+- state is an object like props, but unlike props, which are immutable state can be changed change. Data from states is distributed through props. (https://github.com/uberVU/react-guide/blob/master/props-vs-state.md)
+- states are only available to Class components
+-  [Adding Local State to a Class – React docs](https://reactjs.org/docs/state-and-lifecycle.html#adding-local-state-to-a-class)
+-  [Component State – React docs](https://reactjs.org/docs/faq-state.html)
+
+Convert a function component to a Class component: 
+
+```
+const Counter = () => {
+	return (	
+		<div className="counter">		
+			<button className="counter-action decrement"> - </button>			
+			<span className="counter-score">34</span>
+			<button className="counter-action increment"> + </button>
+		</div>
+	);
+}
+```
+
+Converts to: 
+
+```
+class Counter extends React.Component {
+	render() {
+		return (	
+		<div className="counter">		
+			<button className="counter-action decrement"> - </button>			
+			<span className="counter-score">this.props.score</span>
+			<button className="counter-action increment"> + </button>
+		</div>
+		);
+	}
+}
+```
+
+- if a component is only receiving input from props it's best to use a functional component. 
+- when you want to add state use a class component. 
+- You can also use stateless class components 
+- (determine what's best practice for the project you're working on)
+- State updates may be asynchronous so to make sure state is updating correctly check the existing state before updating using prevState
+
+There are two main types of state when creating a React app: 
+
+1. Application state: is the main state we think about. It's the Data that is available to the entire application. In the scoreboard application, all of our Application State lives in the App component and all of its child components have access to it. 
+3. Component state: The counter component has state that's not shared outside of it, which is local component state. That state is required for only that component to do its job. 
