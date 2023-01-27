@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sign-Up Form</title>
+</head>
+<body id="wrapper">
+    
+<header id="header">
+    <div id="branding">
+        <img class="logo" src="media/odin-lined.png" alt="The Odin Project Logo">
+        <h1>Odin</h1>
+    </div>
+    <p class="photo-credit"> Photo by <a href="https://unsplash.com/@vickholius" target=”_blank”>@vickholius</a> on <a href="https://unsplash.com" target=”_blank”>unsplash.com</a> </p>
+</header>
+
+<main id="content">
+    <div class="form-container">
+        <form action="index.php" method="post" class="sign-up-form">
+            <div class="form-group" >
+                <label for="first-name">First Name</label>
+                <input type="text" name="first-name" id="first-name" placeholder="First Name" required>
+                <div id="fname-err-msg"></div>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last-name" id="last-name" placeholder="Last Name" required>
+                <div id="lname-err-msg"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Email" required>
+                <div id="email-err-msg"></div>
+            </div>
+            <div class="form-group">
+                <label for="Username">Username</label>
+                <input type="text" name="Username" id="username" placeholder="Username" required>
+                <div id="username-err-msg"></div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="text" name="password" id="password" placeholder="Password" required >
+                <div id="password-err-msg"></div>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="text" name="confirm-password" id="confirm-password" placeholder="Confirm Password" required>
+                <div id="confirm-password-err-msg"></div>
+            </div>
+        </form>
+        <div id="submit" class="submit">
+            <button type="submit" value="Sign-Up">Sign-Up</button>
+            <p>Already have an account? <a href="/">Log in</a></p>
+        </div>  
+    </div>
+
+    
+</main>
+    <script src="scripts.js"></script>
+</body>
+</html>
