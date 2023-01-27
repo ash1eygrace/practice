@@ -94,7 +94,7 @@ const Planet = (props) => {
 //    and renders a 'Planet' component for each object in the array
 
 
-class App extends React.Component {
+class PlanetList extends React.Component {
 
   render() {
     return (
@@ -119,6 +119,6 @@ class App extends React.Component {
 // 3: Render the container component to the DOM
 
 ReactDOM.render(
-  <App />,
+  <PlanetList />,
   document.getElementById('root')
 );
