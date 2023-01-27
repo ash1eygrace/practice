@@ -25,7 +25,7 @@ ReactDOM.render(
 
 ```
 
-React components are required to begin with an uppercase letter, and within `ReactDOM.render` the capitol letter is required to differentiate custom Components to native DOM elements. 
+React components are required to begin with an uppercase letter, and within `ReactDOM.render` the uppercase letter is required to differentiate custom Components to native DOM elements. 
 
 To display nested components inside of the header you'd use syntax like:
 
