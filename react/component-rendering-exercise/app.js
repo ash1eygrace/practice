@@ -71,7 +71,7 @@ const planets = [
 
 // 1: Create a 'Planet' component that renders a planet card
 
-const Planets = (props) => {
+const Planet = (props) => {
   return (
     <div className="container">
       <div className="card">
@@ -89,6 +89,7 @@ const Planets = (props) => {
     </div>
   );
 }
+
 // 2: Create a container component that iterates over the planets array 
 //    and renders a 'Planet' component for each object in the array
 
@@ -100,7 +101,7 @@ class App extends React.Component {
       <div>
         {planets.map((planet) => {
           return (
-            <Planets
+            <Planet
               name={planet.name}
               diameter={planet.diameter}
               moon={planet.moons}
