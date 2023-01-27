@@ -111,7 +111,7 @@ props
 	new entry: ""
 ```
 
-We can pass props to the Header through the JSX tax like so, and give by giving our function a parameter 
+We can pass props to the Header through the JSX tag like so, and give our function a parameter 
 
 ```js
 
@@ -154,9 +154,9 @@ props
 ```
 
 - props pass data from a parent component down to a child component
-- parent component higher in the tree owns and controls the prop values
+- the parent component higher in the tree owns and controls the prop values
 - props are immutable e.g. components can only read props never change them 
-- if there is more than one prop add to separate lines for better readability
+- if there is more than one prop it's best practice to add them to separate lines for better readability
 
 ## State
 
@@ -198,10 +198,10 @@ class Counter extends React.Component {
 ```
 
 - if a component is only receiving input from props it's best to use a functional component. 
-- when you want to add state use a class component. 
+- when you want to add state, use a class component. 
 - You can also use stateless class components 
-- (determine what's best practice for the project you're working on)
-- State updates may be asynchronous so to make sure state is updating correctly check the existing state before updating using prevState
+- (determine what's best practice for the project you're working on by reading the style guide/contributing docs)
+- State updates may be asynchronous so to make sure state is updating correctly check the existing state before updating using `prevState`
 
 There are two main types of state when creating a React app: 
 
