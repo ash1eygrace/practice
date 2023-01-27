@@ -4,7 +4,7 @@
 
 ## Live Form Demo:
 
-https://ash1eygrace.github.io/registration-form/
+https://ash1eygrace.github.io/practice/mini-projects/registration-form/
 
 ## About this Project
 
