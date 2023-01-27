@@ -73,7 +73,6 @@ const planets = [
 
 const Planet = (props) => {
   return (
-    <div className="container">
       <div className="card">
       <div>
           <img src={props.url} alt={props.name} />
@@ -86,7 +85,6 @@ const Planet = (props) => {
           <li><strong>Moons:</strong> {props.moon}</li>
         </ul>
       </div>
-    </div>
   );
 }
 
@@ -98,7 +96,7 @@ class PlanetList extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         {planets.map((planet) => {
           return (
             <Planet
