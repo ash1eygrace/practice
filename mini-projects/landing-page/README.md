@@ -1,8 +1,8 @@
 # landing-page
 
-## View landing page: 
+## Live Demo
 
-https://ash1eygrace.github.io/landing-page/
+https://ash1eygrace.github.io/practice/mini-projects/landing-page/
 
 ## About this Project
 
