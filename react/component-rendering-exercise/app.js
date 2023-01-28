@@ -97,12 +97,18 @@ const PlanetList = (props) => {
     <div className="container">
       {props.planets.map( planet => 
           <Planet 
-            name={planet.name}
+            /*name={planet.name}
             diameter={planet.diameter}
             moon={planet.moons}
             desc={planet.desc}
             url={planet.url}
-            key={planet.id} 
+            key={planet.id}
+            
+            refactoring to use spread operator to pass props:
+            https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+            */
+            {...planet}
+            key={planet.id}
           />
       )}
     </div>
