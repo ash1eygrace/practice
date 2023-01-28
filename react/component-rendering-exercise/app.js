@@ -92,31 +92,27 @@ const Planet = (props) => {
 //    and renders a 'Planet' component for each object in the array
 
 
-class PlanetList extends React.Component {
-
-  render() {
-    return (
-      <div className="container">
-        {planets.map((planet) => {
-          return (
-            <Planet
-              name={planet.name}
-              diameter={planet.diameter}
-              moon={planet.moons}
-              desc={planet.desc}
-              url={planet.url}
-            />
-          );
-        })}
-      </div>
-    );
-  }
+const PlanetList = (props) => {
+  return (
+    <div className="container">
+      {props.planets.map( planet => 
+          <Planet 
+            name={planet.name}
+            diameter={planet.diameter}
+            moon={planet.moons}
+            desc={planet.desc}
+            url={planet.url}
+            key={planet.id} 
+          />
+      )}
+    </div>
+  );
 }
 
 
 // 3: Render the container component to the DOM
 
 ReactDOM.render(
-  <PlanetList />,
-  document.getElementById('root')
+  <PlanetList planets={planets}/>, 
+  document.getElementById('root') 
 );
