@@ -106,7 +106,12 @@ class App extends React.Component {
 }
       
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
+// ReactDOM.render(
+//   <App />,
+// );
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <App />
 );
+
