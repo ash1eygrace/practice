@@ -22,33 +22,25 @@ const Player = (props) => {
   );
 }
 
-class Counter extends React.Component {
+const Counter = () => {
+  const [score, setScore] = React.useState(0);
 
-  state = {
-    score: 0
-  };
-
-  incrementScore = () => {
-    this.setState( prevState => ({
-      score: prevState.score + 1
-    }));
+  const incrementScore = () => {
+    setScore(prevScore => prevScore + 1);
   }
   
-  decrementScore = () => {
-    this.setState( prevState => ({
-      score: prevState.score - 1
-    }));
+  const decrementScore = () => {
+    setScore(prevScore => prevScore - 1);
   }
 
-  render() {
-    return (
-      <div className="counter">
-        <button className="counter-action decrement" onClick={this.decrementScore}> - </button>
-        <span className="counter-score">{ this.state.score }</span>
-        <button className="counter-action increment" onClick={this.incrementScore}> + </button>
-      </div>
-    );
-  }
+  return (
+    <div className="counter">
+      <button className="counter-action tdecrement" onClick={() => decrementScore()}> - </button>
+      <span className="counter-score">{ score }</span>
+      <button className="counter-action increment" onClick={() => incrementScore()}> + </button>
+    </div>
+  );
+
 }
 
 class App extends React.Component {
@@ -108,6 +100,7 @@ class App extends React.Component {
 
 // ReactDOM.render(
 //   <App />,
+//   document.getElementById('root'
 // );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
