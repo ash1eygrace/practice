@@ -2,7 +2,7 @@
 
 ## Live Demo
 
-https://ash1eygrace.github.io/practice/mini-projects/landing-page/
+https://ash1eygrace.github.io/practice/projects/landing-page/
 
 ## About this Project
 
