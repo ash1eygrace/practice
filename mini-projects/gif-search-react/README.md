@@ -2,7 +2,7 @@
 
 ## Live demo
 
-https://ash1eygrace.github.io/practice/mini-projects/gif-search-react
+https://giphy.ash1eygrace.com
 
 ## Purpose of this App 🤖
 
