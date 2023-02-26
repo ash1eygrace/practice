@@ -5,7 +5,7 @@ import GifList from "./Components/GifList";
 
 function App() {
   const [gifs, setGifs] = useState([]);
-  const [query, setQuery] = useState("hey");
+  const [query, setQuery] = useState("cats");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
