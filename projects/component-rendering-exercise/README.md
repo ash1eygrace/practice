@@ -8,6 +8,11 @@ https://ash1eygrace.github.io/practice/projects/component-rendering-exercise/
 
 This project involved practicing JSX and leveraging the power of React and had us working with an array of objects to extract relevant data to pass through components and display them on the screen dynamically. 
 
+Example of components and the data they're generated from:
+
+<img width="1705" alt="image" src="https://user-images.githubusercontent.com/29527450/221874377-7ab9be3b-a21a-42c7-89e3-1c4007d100aa.png">
+
+
 ## Learning outcomes
 
 - To iterate over data using map(), this project provides an opportunity to develop one's skills in JavaScript, particularly in array manipulation and iteration.
