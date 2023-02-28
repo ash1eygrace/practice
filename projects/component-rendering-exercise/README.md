@@ -1,4 +1,4 @@
-# Registration Form
+# Rendering Planet Components
 
 ## Live Form Demo:
 
