@@ -19,3 +19,5 @@ Building this project taught me how to use React state in a real-world scenario.
 - Get familiar with React DevTools for debugging and understanding how state is changing over time. 
 
 ## Example Usage: 
+
+https://user-images.githubusercontent.com/29527450/222148788-037d0fd1-a49b-4b42-b90c-5821c64f7cac.mov
