@@ -8,6 +8,10 @@ This project demonstrates the use of React Router for routing and navigation. In
 - Declaring dynamic routes using special URL parameters and accessing them using the useParams hook.
 - Navigating routes programmatically using the useNavigate hook.
 
+## Video Demo
+
+https://user-images.githubusercontent.com/29527450/223184585-75952436-7587-42e7-aeda-dc08c0d03309.mov
+
 ## Getting started
 
 To run this app locally, follow these steps:
