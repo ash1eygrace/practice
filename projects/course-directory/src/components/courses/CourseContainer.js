@@ -1,9 +1,8 @@
 import React from 'react';
 import Course from './Course';
-import { CSSCourses } from '../../data/courses';
 
-const CSS = (props) => {
-  let courses = CSSCourses.map((course) => {
+const CourseContainer = ({data}) => {
+  let courses = data.map((course) => {
     return (
       <Course
         title={course.title}
@@ -22,4 +21,4 @@ const CSS = (props) => {
   );
 }
 
-export default CSS;
+export default CourseContainer;
