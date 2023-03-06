@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 
 // App components
 import Header from "./components/Header";
@@ -19,7 +19,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="teachers" element={<Teachers />} />
-        <Route path="courses/*" element={<Courses />}>
+        <Route path="courses" element={<Courses />}>
+          <Route index element={<Navigate replace to="html" />} />
           <Route path="html" element={<HTML />} />
           <Route path="css" element={<CSS />} />
           <Route path="javascript" element={<JavaScript />} />
