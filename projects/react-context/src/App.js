@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import UserContext from "./context/UserContext";
 
 // App Components
 import Header from "./components/Header";
@@ -43,13 +42,6 @@ function App() {
   }
 
   return (
-    <UserContext.Provider value={{
-      user,
-      actions: {
-        signIn: signInUser,
-        signOut: signOutUser
-      }
-    }}>
       <div>
         <Header accentColor={accentColor} />
         <Routes>
@@ -70,7 +62,6 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
-    </UserContext.Provider>
   );
 }
 
