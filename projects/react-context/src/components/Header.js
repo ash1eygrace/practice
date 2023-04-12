@@ -9,7 +9,7 @@ const Header = (props) => {
         <Link to="/">
           <h1 className="header--logo">MyApp</h1>
         </Link>
-        <Nav user={props.user} />
+        <Nav/>
       </div>
     </div>
   );
