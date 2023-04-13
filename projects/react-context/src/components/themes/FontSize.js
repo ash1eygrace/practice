@@ -1,4 +1,9 @@
-const FontSize = (props) => {
+import { useContext } from "react";
+import ThemeContext from "../../context/ThemeContext";
+
+const FontSize = () => {
+  const { fontPercentage, accentColor, actions } = useContext(ThemeContext);
+
   return (
     <div>
       <h3>Adjust Font Size</h3>
@@ -9,9 +14,9 @@ const FontSize = (props) => {
         min="50"
         max="250"
         step='25'
-        value={props.fontPercentage}
-        onChange={(e) => props.updateFontPercentage(+e.target.value)}
-        style={{ accentColor: props.accentColor }} />
+        value={fontPercentage}
+        onChange={(e) => actions.updateFontPercentage(+e.target.value)}
+        style={{ accentColor: accentColor }} />
 
       <datalist id="tickmarks">
         <option value="50" label="50%"></option>
