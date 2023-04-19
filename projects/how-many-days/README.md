@@ -1,8 +1,15 @@
 # Time Calculator
 
-This project is a simple time calculator web application that allows users to determine how long ago a specific date was in days, weeks, months, or years. The goal of this project was to practice JavaScript date manipulation and provide a user-friendly way to calculate time differences.
+## Live Demo: 
 
-Live Demo: https://ash1eygrace.github.io/practice/projects/how-many-days/
+https://ash1eygrace.github.io/practice/projects/how-many-days/
+
+## Video Example: 
+
+https://user-images.githubusercontent.com/29527450/233203223-4d1f6484-ba4c-405e-9755-c19dacf83e3c.mov
+
+
+This project is a simple time calculator web application that allows users to determine how long ago a specific date was in days, weeks, months, or years. The goal of this project was to practice JavaScript date manipulation and provide a user-friendly way to calculate time differences.
 
 ## Features
 - Allows users to select a date from a date picker
@@ -27,4 +34,4 @@ To use the Time Calculator, simply follow these steps:
 3. Choose the desired unit of time (days, weeks, months, or years) from the dropdown menu
 4. Click on the "Calculate" button
 
-The result will be displayed below the button, showing how long ago the selected date was in the chosen unit of time
+The result will be displayed below the button, showing how long ago the selected date was in the chosen unit of time.
