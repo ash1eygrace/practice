@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap');
+
+/* Global styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.875rem;
+    color: #0E273C;
+}
+
+/* Container styles */
+.container {
+    padding: 2rem;
+    max-width: 1000px;
+    width: 80%;
+    text-align: center;
+}
+
+/* Button styles */
+button {
+    font-size: 1.4rem;
+    font-family: inherit;
+    border: 2px solid #0E273C;
+    border-radius: 8px;
+    padding: 12px 24px;
+    color: #ffffff;
+    background-color: #6D466B;
+}
+
+/* Result styles */
+.result {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.result.visible {
+    opacity: 1;
+}
+
+/* Input styles */
+select,
+input[type="date"] {
+    font-size: 1.4rem;
+    font-family: inherit;
+    border: 2px solid #0E273C;
+    border-radius: 8px;
+    padding: 8px;
+    color: #ffffff;
+    background-color: #6D466B;
+    appearance: none;
+    text-align: center;
+}
+
+/* Remove default arrow in Safari */
+select::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.error {
+    color: #D62246;
+}

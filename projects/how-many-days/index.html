@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <p class="result" id="result"></p> 
+        <p class="question">How many <select id="unit">
+            <option value="days">days</option>
+            <option value="weeks">weeks</option>
+            <option value="months">months</option>
+            <option value="years">years</option>
+        </select> ago was <input type="date" id="datePicker" max="">?</p>
+        <button onclick="calculateTimeAgo()">Calculate</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
