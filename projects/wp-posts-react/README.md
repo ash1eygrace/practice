@@ -1,6 +1,6 @@
 # WordPress Posts with React
 
-This project is a React web application that fetches and displays WordPress blog posts from ash1eygrace.com using the WordPress REST API. The goal of this project is to practice CSS grid, and fetching data from WP's REST API using Axios before I impliment it into my new React portfolio. 
+This project is a React web application that fetches and displays WordPress blog posts from ash1eygrace.com using the WordPress REST API. The goal of this project is to practice CSS grid, and fetching data from WP's REST API using Axios before I implement it into my new React portfolio. 
 
 ## Video Demo: 
 
