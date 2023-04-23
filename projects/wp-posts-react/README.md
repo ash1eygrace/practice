@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# WordPress Posts with React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React web application that fetches and displays WordPress blog posts from ash1eygrace.com using the WordPress REST API. The goal of this project is to practice CSS grid, and fetching data from WP's REST API using Axios before I impliment it into my new React portfolio. 
 
-## Available Scripts
+## Video Demo: 
 
-In the project directory, you can run:
 
-### `npm start`
+https://user-images.githubusercontent.com/29527450/233869853-de647bd3-2ff9-480c-ab72-f0b9059fd90f.mov
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- Fetches and displays a list of blog posts from a WordPress site
+- Utilizes CSS Grid to display the posts in a grid format
+- Allows navigation to single post views for reading the full content
+- Implements navigation using `react-router-dom` v6
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Learning Outcomes
 
-### `npm run build`
+Building this project helped me to:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Fetch and parse data from an API using Axios
+- Use React Hooks, such as `useState` and `useEffect`, for managing component state and side effects
+- Implement routing and navigation in a React app using `react-router-dom` v6
+- Create a user-friendly interface using HTML and CSS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To use the WordPress Posts with React app, simply follow these steps:
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clone this repository or download the source code
+2. Run `npm install` to install the required dependencies
+3. Replace the WordPress site URL in the `PostsGrid.js` and `SinglePost.js` files with your own WordPress site's URL
+4. Run `npm start` to start the development server
+5. Open your browser and navigate to `http://localhost:3000`
+6. Browse the list of blog posts and click on a title to view the full content of a single post
