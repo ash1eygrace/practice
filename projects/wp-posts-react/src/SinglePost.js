@@ -20,7 +20,7 @@ const SinglePost = () => {
   }, [id]);
 
   if (!post) {
-    return <p>Loading...</p>;
+    return <p className='loading'>Loading...</p>;
   }
 
   return (
