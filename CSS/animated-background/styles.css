@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    overflow: hidden;
+  }
+  
+  .origami-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .polygon {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 50vmin;
+    border-style: solid;
+    opacity: 0.5;
+    animation: colorCycle 10s infinite;
+  }
+  
+  .polygon:nth-child(1) {
+    top: -25vmin;
+    left: -25vmin;
+    border-color: transparent transparent transparent red;
+    animation-delay: 0s;
+  }
+  
+  .polygon:nth-child(2) {
+    top: -25vmin;
+    right: -25vmin;
+    border-color: transparent transparent red transparent;
+    animation-delay: 2s;
+  }
+  
+  .polygon:nth-child(3) {
+    bottom: -25vmin;
+    left: -25vmin;
+    border-color: red transparent transparent transparent;
+    animation-delay: 4s;
+  }
+  
+  .polygon:nth-child(4) {
+    bottom: -25vmin;
+    right: -25vmin;
+    border-color: transparent red transparent transparent;
+    animation-delay: 6s;
+  }
+  
+  .polygon:nth-child(5) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-width: 100vmin;
+    border-color: transparent transparent transparent red;
+    animation-delay: 8s;
+  }
+  
+  @keyframes colorCycle {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+  }
+  
