@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Audiobook Progress Calculator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Audiobook Progress Calculator</h2>
+    <div class="input-group">
+      <label for="total-hours">Total audiobook duration:</label>
+      <input type="number" id="total-hours" placeholder="Hours">
+      <input type="number" id="total-minutes" placeholder="Minutes">
+      <input type="number" id="total-seconds" placeholder="Seconds">
+    </div>
+    <div class="input-group">
+      <label for="current-hours">Your current time:</label>
+      <input type="number" id="current-hours" placeholder="Hours">
+      <input type="number" id="current-minutes" placeholder="Minutes">
+      <input type="number" id="current-seconds" placeholder="Seconds">
+    </div>
+    <button onclick="calculateProgress()">Calculate</button>
+    <div id="output"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
