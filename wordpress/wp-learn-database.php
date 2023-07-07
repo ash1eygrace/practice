@@ -17,7 +17,7 @@ Video: https://wordpress.tv/2023/06/23/the-wordpress-database/
 	// Load the WordPress library.
 	require_once __DIR__ . '/wp-load.php';
 
-    // Get's post by ID and returns post content
+    // Get post by ID and returns post content
     // https://developer.wordpress.org/reference/functions/get_post/
     //
     // $my_post_id = 2;
