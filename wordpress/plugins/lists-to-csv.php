@@ -7,14 +7,15 @@ Author: @ash1eygrace
 */
 
 /**
- * Fetch lists (both ordered and unordered) from all posts within a given date range 
+ * Fetch lists (both ordered and unordered) from all posts within a given date range and categories
  * and return them along with the post's permalink.
  *
  * @param string $startDate The start date in 'YYYY-MM-DD' format.
  * @param string $endDate The end date in 'YYYY-MM-DD' format.
+ * @param array $categories An array of category IDs to filter posts by.
  * @return array An array of associative arrays with 'content' for the list content and 'permalink' for the post's URL.
  */
-function fetch_lists_from_posts($startDate = '', $endDate = '') {
+function fetch_lists_from_posts($startDate = '', $endDate = '', $categories = array()) {
     $args = array(
         'posts_per_page' => -1,
         'post_type' => 'post',
@@ -26,6 +27,7 @@ function fetch_lists_from_posts($startDate = '', $endDate = '') {
                 'inclusive' => true,
             ),
         ),
+        'category__in' => $categories  // Filter by categories
     );
 
     $posts = get_posts($args);
@@ -55,10 +57,13 @@ function download_lists_as_csv() {
         $startDate = isset($_GET['start_date']) ? $_GET['start_date'] : '';
         $endDate = isset($_GET['end_date']) ? $_GET['end_date'] : '';
 
+        // Convert comma-separated category IDs from URL into an array
+        $categories = isset($_GET['categories']) ? explode(',', $_GET['categories']) : array();
+
         header('Content-Type: text/csv');
         header('Content-Disposition: attachment; filename="lists.csv"');
 
-        $data = fetch_lists_from_posts($startDate, $endDate);
+        $data = fetch_lists_from_posts($startDate, $endDate, $categories);
 
         $output = fopen('php://output', 'w');
         
@@ -74,6 +79,7 @@ function download_lists_as_csv() {
     }
 }
 
+
 add_action('admin_init', 'download_lists_as_csv');
 
 /**
@@ -86,22 +92,35 @@ function lists_to_csv_menu() {
 }
 
 /**
- * Display the form to choose a date range and the link to trigger the CSV download on the custom admin page.
+ * Display the form to choose a date range, categories, and the link to trigger the CSV download on the custom admin page.
  *
  * @return void
  */
 function download_lists_as_csv_page() {
-    // Check if dates are set
+    // Retrieve all categories
+    $categories = get_categories(array(
+        'orderby' => 'name',
+        'order'   => 'ASC'
+    ));
+
+    // Check if dates and categories are set
     $startDate = isset($_POST['start_date']) ? $_POST['start_date'] : '';
     $endDate = isset($_POST['end_date']) ? $_POST['end_date'] : '';
+    $selectedCategories = isset($_POST['categories']) ? $_POST['categories'] : array();
 
     echo '<form method="post" action="">';
     echo 'Start Date: <input type="date" name="start_date" value="' . esc_attr($startDate) . '">';
     echo 'End Date: <input type="date" name="end_date" value="' . esc_attr($endDate) . '">';
-    echo '<input type="submit" value="Set Date Range">';
+
+    echo '<br>Select Categories:<br>';
+    foreach($categories as $category) {
+        echo '<input type="checkbox" name="categories[]" value="' . $category->term_id . '"' . (in_array($category->term_id, $selectedCategories) ? ' checked' : '') . '> ' . $category->name . '<br>';
+    }
+
+    echo '<input type="submit" value="Set Filters">';
     echo '</form>';
 
-    echo '<a href="' . admin_url('?download_lists_csv=true&start_date=' . $startDate . '&end_date=' . $endDate) . '">Download Lists as CSV</a>';
+    echo '<a href="' . admin_url('?download_lists_csv=true&start_date=' . $startDate . '&end_date=' . $endDate . '&categories=' . implode(',', $selectedCategories)) . '">Download Lists as CSV</a>';
 }
 
 add_action('admin_menu', 'lists_to_csv_menu');
