@@ -34,11 +34,19 @@ function fetch_lists_from_posts($startDate = '', $endDate = '', $categories = ar
     $lists_data = array();
 
     foreach ($posts as $post) {
+        // Get the categories of the post
+        $post_categories = get_the_category($post->ID);
+        $category_names = array_map(function($cat) { return $cat->name; }, $post_categories);
+        $categories_list = implode(', ', $category_names);
+
         if (preg_match_all('/<li>(.*?)<\/li>/', $post->post_content, $matches)) {
             foreach ($matches[1] as $match) {
                 $lists_data[] = array(
                     'content' => strip_tags($match),
-                    'permalink' => get_permalink($post->ID)
+                    'permalink' => get_permalink($post->ID),
+                    'title' => get_the_title($post->ID),
+                    'categories' => $categories_list,
+                    'publish_date' => get_the_date('Y-m-d', $post->ID)
                 );
             }
         }
@@ -68,10 +76,10 @@ function download_lists_as_csv() {
         $output = fopen('php://output', 'w');
         
         // Adding header row to CSV
-        fputcsv($output, array("List Content", "Post URL"));
+        fputcsv($output, array("List Content", "Post URL", "Post Title", "Categories", "Publish Date"));
 
         foreach ($data as $line) {
-            fputcsv($output, array($line['content'], $line['permalink']));
+            fputcsv($output, array($line['content'], $line['permalink'], $line['title'], $line['categories'], $line['publish_date']));
         }
 
         fclose($output);
