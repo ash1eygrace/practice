@@ -169,6 +169,3 @@ function affiliate_disclaimer_add_to_content($content) {
 }
 
 add_filter('the_content', 'affiliate_disclaimer_add_to_content');
-
-
-add_filter('the_content', 'affiliate_disclaimer_add_to_content');
